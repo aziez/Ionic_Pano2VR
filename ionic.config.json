@@ -1,0 +1,7 @@
+{
+  "name": "Virtual_Tour",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
