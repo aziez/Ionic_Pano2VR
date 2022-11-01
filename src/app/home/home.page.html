@@ -1,20 +1,30 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
+  <iframe [src]="sanitize" class="main" frameborder="0"></iframe>
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <h1>Selamat Datang di <a>Virtual Tour</a></h1>
+  <p>
+  <strong>Jelajahi Lingkungan Universitas Pamulang secara Virtual</strong>
+  </p>
+  <ion-button fill="outline" color="primary" size="large">Mulai</ion-button>
+</div>
+
+  <ion-fab vertical="bottom" horizontal="end">
+    <ion-button nz-button (click)="showModal()">Visi dan Misi</ion-button>
+    </ion-fab>
+
+    <nz-modal [(nzVisible)]="isVisible" nzTitle="Visi dan Misi">
+      <ng-container #nzModalContent>
+        <p>teessst</p>
+      </ng-container>
+    </nz-modal>
+
+    <ion-fab vertical="bottom" horizontal="start">
+      <ion-item color="transparant">
+        <ion-avatar slot="start">
+          <img src="https://unpam.ac.id/wp-content/uploads/2021/02/logo-unpam-300x291.png" alt="" srcset="">
+        </ion-avatar>
+        <ion-label>Berbagi untuk Negri</ion-label>
+      </ion-item>
+      </ion-fab>
+
 </ion-content>
