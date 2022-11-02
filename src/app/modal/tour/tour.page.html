@@ -1,0 +1,10 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{id}}</ion-title>
+    <ion-button slot="end" (click)="closeModal()">Close</ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <iframe [src]="url" class="main" frameborder="0"></iframe>
+</ion-content>

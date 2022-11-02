@@ -10,7 +10,19 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
+  },  {
+    path: 'visi-misi',
+    loadChildren: () => import('./modal/visi-misi/visi-misi.module').then( m => m.VisiMisiPageModule)
   },
+  {
+    path: 'selection',
+    loadChildren: () => import('./selection/selection.module').then( m => m.SelectionPageModule)
+  },
+  {
+    path: 'tour',
+    loadChildren: () => import('./modal/tour/tour.module').then( m => m.TourPageModule)
+  },
+
 ];
 
 @NgModule({

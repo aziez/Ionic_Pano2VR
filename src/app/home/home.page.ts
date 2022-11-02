@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
-
+import { ModalController } from '@ionic/angular';
+import { VisiMisiPage } from '../modal/visi-misi/visi-misi.page';
 
 @Component({
   selector: 'app-home',
@@ -12,12 +13,15 @@ export class HomePage {
   sanitize: any;
   isVisible = false;
 
-  constructor(private sanitizer: DomSanitizer) {
+  constructor(private sanitizer: DomSanitizer, private modalCtrl: ModalController) {
     this.sanitize = this.sanitizer.bypassSecurityTrustResourceUrl(this.main);
   }
 
-  showModal(): void {
-    this.isVisible = true;
+  async showModal() {
+    const modal = await this.modalCtrl.create({
+      component: VisiMisiPage,
+    });
+    modal.present();
   }
 
 }

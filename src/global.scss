@@ -24,3 +24,34 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+.modal-fullscreen {
+    --width: 100%;
+    --height: 100%;
+    --border-radius: 0;
+}
+
+ion-loading.custom-loading {
+  --background: #e3edff;
+  --spinner-color:#0e7490 ;
+  // --backdrop-opacity: 5;
+  color: #0e7490;
+}
+
+
+ion-modal {
+  --padding: 10px;
+  // --height: 50%;
+  // --border-radius: 16px;
+  --box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+ion-modal::part(backdrop) {
+  background: rgba(209, 213, 219);
+  opacity: 1;
+}
+
+ion-modal ion-toolbar {
+  --background: #0e7490;
+  --color: white;
+}

@@ -5,19 +5,12 @@
   <p>
   <strong>Jelajahi Lingkungan Universitas Pamulang secara Virtual</strong>
   </p>
-  <ion-button fill="outline" color="primary" size="large">Mulai</ion-button>
+  <ion-button fill="outline" [routerLink]="['/selection']" routerLinkActive="router-link-active" >Mulai</ion-button>
 </div>
 
   <ion-fab vertical="bottom" horizontal="end">
     <ion-button nz-button (click)="showModal()">Visi dan Misi</ion-button>
     </ion-fab>
-
-    <nz-modal [(nzVisible)]="isVisible" nzTitle="Visi dan Misi">
-      <ng-container #nzModalContent>
-        <p>teessst</p>
-      </ng-container>
-    </nz-modal>
-
     <ion-fab vertical="bottom" horizontal="start">
       <ion-item color="transparant">
         <ion-avatar slot="start">
@@ -26,5 +19,4 @@
         <ion-label>Berbagi untuk Negri</ion-label>
       </ion-item>
       </ion-fab>
-
 </ion-content>
