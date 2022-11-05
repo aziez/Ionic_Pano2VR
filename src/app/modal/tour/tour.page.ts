@@ -11,17 +11,13 @@ export class TourPage implements OnInit, AfterViewInit {
   asset = 'assets/output/index.html#';
   url: any;
   id: any;
-
-
   constructor(private sanitize: DomSanitizer,private modalCtrl: ModalController, private loadingCtrl: LoadingController) {
     this.url = sanitize.bypassSecurityTrustResourceUrl(this.asset);
 
   }
-
   closeModal(){
     this.modalCtrl.dismiss();
   }
-
   async loadingShow(){
     const loading = await this.loadingCtrl.create({
       message: 'Loading...',
@@ -31,16 +27,12 @@ export class TourPage implements OnInit, AfterViewInit {
       res.present();
     });
   }
-
   ngOnInit() {
     this.loadingShow();
   }
-
   ngAfterViewInit() {
     const select = this.asset+this.id;
     this.url = this.sanitize.bypassSecurityTrustResourceUrl(select);
   }
-
-
 
 }
